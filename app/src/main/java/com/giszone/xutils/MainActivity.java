@@ -1,6 +1,7 @@
 package com.giszone.xutils;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.giszone.utils.ToastUtils;
 import com.giszone.utils.XUtils;
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
         XUtils.init(this);
 
-        ToastUtils.setResultToToast("ahahahhaha");
+    }
+
+    public void click(View v) {
+        ToastUtils.setResultToToast("ahahhaha");
     }
 }

@@ -1,5 +1,6 @@
 package com.giszone.utils;
 
+import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
@@ -69,7 +70,7 @@ public class ToastUtils {
      * @param duration 显示时长
      */
     private static void showToast(CharSequence text, int duration) {
-        if (sToast == null) {
+        if (sToast == null || Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             sToast = Toast.makeText(XUtils.getContext(), text, duration);
         } else {
             sToast.setText(text);
